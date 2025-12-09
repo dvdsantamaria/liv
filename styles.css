@@ -1,0 +1,146 @@
+/* Custom Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #535353;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass Effect */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Filter for "Tranquility" effect based on image */
+.img-tranquil {
+    /* Removed sepia and increased saturation to make the overlay color pop more */
+    filter: sepia(0%) saturate(100%) contrast(95%) brightness(105%);
+    transition: filter 0.5s ease;
+}
+
+.group:hover .img-tranquil {
+    filter: sepia(0%) saturate(100%) contrast(100%) brightness(100%);
+}
+
+/* Hero Overlays - Dreamy Sunset Theme */
+.hero-overlay-vertical {
+    background: linear-gradient(to bottom,
+            rgba(127, 165, 186, 0.4) 0%,
+            rgba(198, 171, 136, 0.1) 40%,
+            rgba(249, 247, 244, 0.0) 60%,
+            rgba(249, 247, 244, 1) 100%);
+}
+
+/* 
+.hero-overlay-horizontal {
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(198, 171, 136, 0.1) 50%,
+            rgba(198, 171, 136, 0.2) 100%);
+} */
+
+/* Text Shadows - Removed as per feedback */
+
+/* Text Effects */
+.text-delight {
+    mix-blend-mode: difference;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    /* Ensure strictly bold for the effect to be visible */
+}
+
+/* Font Utilities */
+.font-geist {
+    font-family: 'Geist', sans-serif !important;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif !important;
+}
+
+.font-instrument-serif {
+    font-family: 'Instrument Serif', serif !important;
+}
+
+.font-merriweather {
+    font-family: 'Merriweather', serif !important;
+}
+
+.font-bricolage {
+    font-family: 'Bricolage Grotesque', sans-serif !important;
+}
+
+.font-jakarta {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-manrope {
+    font-family: 'Manrope', sans-serif !important;
+}
+
+.font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.font-work-sans {
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+.font-pt-serif {
+    font-family: 'PT Serif', serif !important;
+}
+
+.font-geist-mono {
+    font-family: 'Geist Mono', monospace !important;
+}
+
+.font-space-mono {
+    font-family: 'Space Mono', monospace !important;
+}
+
+.font-quicksand {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif !important;
+}

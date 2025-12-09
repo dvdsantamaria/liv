@@ -1,0 +1,923 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIV Migration | Australia</title>
+
+    <!-- Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link id="all-fonts-link-font-geist" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-roboto" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-poppins" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-playfair" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-merriweather" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+
+    <link id="all-fonts-link-font-bricolage" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-manrope" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-work-sans" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-pt-serif" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-geist-mono" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-space-mono" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-quicksand" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-nunito" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-[#C6AB88] selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-panel border-b-0">
+        <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
+            <button onclick="toggleMobileMenu()"
+                class="md:hidden text-[#535353] p-2 hover:bg-black/5 rounded-lg transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="menu" class="lucide lucide-menu w-5 h-5">
+                    <path d="M4 5h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 19h16"></path>
+                </svg>
+            </button>
+
+            <!-- Logo -->
+            <!-- Logo -->
+            <div class="flex-1 md:flex-none text-center md:text-left">
+                <a href="#" onclick="switchPage('home')" class="inline-block hover:opacity-80 transition-opacity">
+                    <img src="assets/logo-old.png" alt="LIV Migration Logo" class="h-12 w-auto object-contain">
+                </a>
+            </div>
+
+
+
+            <div class="hidden md:flex items-center gap-6 pl-8">
+                <!-- Language Selector -->
+                <div class="flex items-center gap-4 text-[10px] font-medium tracking-widest text-[#535353]/60">
+                    <button class="flex items-center gap-2 opacity-100 hover:opacity-70 transition-all group"
+                        aria-label="Cambiar a Español">
+                        <img src="https://flagcdn.com/w40/es.png" alt="Bandera de España"
+                            class="h-3 w-5 object-cover rounded-[2px] shadow-sm opacity-90 group-hover:opacity-100 transition-opacity">
+                        <span class="text-[#535353]">ES</span>
+                    </button>
+                    <div class="h-3 w-px bg-[#535353]/10"></div>
+                    <button class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-all group"
+                        aria-label="Switch to English">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"
+                            class="h-3 w-5 object-cover rounded-[2px] shadow-sm opacity-80 group-hover:opacity-100 transition-opacity">
+                        <span>EN</span>
+                    </button>
+                </div>
+
+                <button
+                    class="bg-[#535353] hover:bg-[#3d3d3d] text-white text-xs font-medium px-6 py-3 rounded-full shadow-lg shadow-gray-200 transition-all transform hover:scale-[1.02]">
+                    Reservar consulta
+                </button>
+            </div>
+
+            <button class="md:hidden text-[#535353] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="calendar" class="lucide lucide-calendar w-5 h-5">
+                    <path d="M8 2v4"></path>
+                    <path d="M16 2v4"></path>
+                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                    <path d="M3 10h18"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-[#F9F7F4] z-40 transform -translate-x-full transition-transform duration-500 md:hidden flex flex-col pt-24 px-8 space-y-8">
+            <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 p-2 text-[#535353]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="x" class="lucide lucide-x w-6 h-6">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+            <div class="flex flex-col space-y-6 text-2xl font-light text-[#535353]">
+                <button onclick="switchPage('home'); toggleMobileMenu()" class="text-left">Home</button>
+                <button onclick="switchPage('services'); toggleMobileMenu()" class="text-left">Servicios</button>
+                <button onclick="switchPage('about'); toggleMobileMenu()" class="text-left">Nosotras</button>
+                <button onclick="switchPage('resources'); toggleMobileMenu()" class="text-left">Recursos</button>
+            </div>
+            <div class="pt-8 border-t border-[#E9E9E9]">
+                <button class="w-full bg-[#535353] text-white py-4 rounded-full font-medium">Reservar consulta</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- PAGE 1: HOME -->
+        <section id="page-home" class="page-view fade-in">
+
+            <!-- Atmospheric Hero Section -->
+            <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+                <!-- Background Image with "Tranquility" Filters -->
+                <div class="absolute inset-0">
+                    <img src="assets/opera-hero.png" alt="Sydney Opera House Soft Light"
+                        class="w-full h-full object-cover img-tranquil opacity-90 scale-110">
+                    <!-- Gradient Overlays for Readability & Softness -->
+                    <div class="absolute inset-0 hero-overlay-vertical">
+                    </div>
+                    <div class="hero-overlay-horizontal absolute top-0 right-0 bottom-0 left-0">
+                    </div>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto px-6 text-center pt-20">
+
+
+                    <h1
+                        class="flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-[#535353] leading-[1.1] tracking-tight mb-8">
+                        <span class="whitespace-nowrap">Migrar es un proyecto de vida,</span>
+                        <span class="font-black mt-2 sm:mt-0 text-delight leading-none" style="">un cambio de
+                            horizonte.</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-[#535353]/90 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                        Honestidad radical y diseño de estrategias legales para tu nueva vida en Australia. Sin falsas
+                        promesas.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button
+                            class="w-full sm:w-auto bg-[#535353] hover:bg-black text-white px-8 py-4 rounded-full font-medium shadow-xl shadow-gray-200/50 transition-all hover:-translate-y-1">
+                            Consulta Migratoria
+                        </button>
+                        <button onclick="switchPage('services')"
+                            class="w-full sm:w-auto bg-white/80 backdrop-blur hover:bg-white text-[#535353] px-8 py-4 rounded-full font-medium shadow-lg shadow-gray-100 transition-all hover:-translate-y-1 border border-white">
+                            Explorar Servicios
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-40">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        data-lucide="arrow-down" class="lucide lucide-arrow-down w-5 h-5 text-[#535353]">
+                        <path d="M12 5v14"></path>
+                        <path d="m19 12-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Visual Services Navigation -->
+            <div class="w-full bg-[#F9F7F4]">
+                <div class="max-w-7xl mx-auto px-6 py-32">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Migration Card -->
+                        <div onclick="switchPage('services')"
+                            class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 img-tranquil"
+                                alt="Australian Coast">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/60 to-transparent text-white">
+                                <div class="flex items-center gap-3 mb-3 opacity-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="plane" class="lucide lucide-plane w-5 h-5">
+                                        <path
+                                            d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-xs font-semibold tracking-widest uppercase">Residencia
+                                        Permanente</span>
+                                </div>
+                                <h2 class="text-3xl font-medium mb-3">Migración</h2>
+                                <p
+                                    class="text-white/80 font-light text-sm max-w-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                    Estrategias para visas Skilled, Partner y Employer Sponsored con agentes MARA
+                                    registrados.
+                                </p>
+                                <div class="mt-6 flex items-center gap-2 text-sm font-medium">
+                                    <span>Ver detalles</span> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Student Card -->
+                        <div onclick="switchPage('services')"
+                            class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&amp;w=1974&amp;auto=format&amp;fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 img-tranquil"
+                                alt="Study in Melbourne">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/60 to-transparent text-white">
+                                <div class="flex items-center gap-3 mb-3 opacity-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="book-open"
+                                        class="lucide lucide-book-open w-5 h-5">
+                                        <path d="M12 7v14"></path>
+                                        <path
+                                            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-xs font-semibold tracking-widest uppercase">Futuro
+                                        Académico</span>
+                                </div>
+                                <h2 class="text-3xl font-medium mb-3">Estudiantes</h2>
+                                <p
+                                    class="text-white/80 font-light text-sm max-w-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                    Planificación educativa alineada a tus objetivos migratorios. No vendemos cursos,
+                                    creamos carreras.
+                                </p>
+                                <div class="mt-6 flex items-center gap-2 text-sm font-medium">
+                                    <span>Ver detalles</span> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition -->
+            <div class="bg-white py-32">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-20 items-center">
+                        <div class="">
+                            <span
+                                class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">Filosofía
+                                LIV</span>
+                            <h2 class="text-4xl font-medium text-[#535353] mb-8 tracking-tight">Más que agentes,somos
+                                tus aliadas.</h2>
+                            <p class="text-[#535353]/70 leading-relaxed mb-8 font-light text-lg">
+                                Entendemos la ansiedad de la espera y la complejidad de los formularios porque nosotras
+                                también fuimos migrantes. Nuestro enfoque se basa en la transparencia absoluta: si no
+                                hay un camino viable, te lo diremos. Si lo hay, trazaremos el plan más seguro.
+                            </p>
+                            <button onclick="switchPage('about')"
+                                class="text-[#535353] font-medium border-b border-[#535353] pb-1 hover:text-[#C6AB88] hover:border-[#C6AB88] transition-colors">
+                                Conoce nuestra historia
+                            </button>
+                        </div>
+                        <div class="relative">
+                            <div class="aspect-square rounded-2xl overflow-hidden relative bg-[#E8E6E1]">
+                                <img src="assets/lina.png"
+                                    class="w-full h-full object-contain object-bottom img-tranquil opacity-90"
+                                    alt="Lina">
+                                <div class="absolute inset-0 bg-[#C6AB88]/10 mix-blend-multiply"></div>
+                            </div>
+                            <!-- Floating Card -->
+                            <div
+                                class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="bg-[#F0F4F6] p-2 rounded-full text-[#7FA5BA]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check"
+                                            class="lucide lucide-shield-check w-6 h-6">
+                                            <path
+                                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                            </path>
+                                            <path d="m9 12 2 2 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-semibold text-[#535353]">MARA Registered</p>
+                                        <p class="text-xs text-gray-400">Licencia Oficial</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 font-light italic">"Tu futuro en Australia merece estar
+                                    en manos profesionales y reguladas."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Resources -->
+            <div class="bg-[#F9F7F4] border-white border-t pt-32 pb-32">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex items-end justify-between mb-12">
+                        <div class="">
+                            <h2 class="text-3xl font-medium text-[#535353] mb-2 tracking-tight">Recursos Esenciales</h2>
+                            <p class="text-[#535353]/60 font-light">Guías gratuitas y verificadas para tu llegada.</p>
+                        </div>
+                        <button onclick="switchPage('resources')"
+                            class="hidden md:flex items-center gap-2 text-sm font-medium text-[#C6AB88] hover:text-[#A89482]">
+                            Ver biblioteca <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right"
+                                class="lucide lucide-arrow-right w-4 h-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Resource 1 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#C6AB88] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="map" class="lucide lucide-map w-5 h-5">
+                                    <path
+                                        d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z">
+                                    </path>
+                                    <path d="M15 5.764v15"></path>
+                                    <path d="M9 3.236v15"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">Checklist de Llegada</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6">TFN, cuenta bancaria y tarjeta de
+                                transporte. Lo vital para tus primeras 48hs.</p>
+                            <span class="text-xs font-semibold text-[#C6AB88] flex items-center gap-2">Leer ahora <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+
+                        <!-- Resource 2 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#7FA5BA] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="briefcase"
+                                    class="lucide lucide-briefcase w-5 h-5">
+                                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">Derechos Laborales</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6">Conoce el salario mínimo y tus derechos
+                                como estudiante internacional.</p>
+                            <span class="text-xs font-semibold text-[#7FA5BA] flex items-center gap-2">Leer ahora <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+
+                        <!-- Resource 3 -->
+                        <div
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#697C69] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="home" class="lucide lucide-home w-5 h-5">
+                                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                                    <path
+                                        d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">Alquilar en Australia</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6">Cómo preparar una aplicación de
+                                alquiler exitosa en un mercado competitivo.</p>
+                            <span class="text-xs font-semibold text-[#697C69] flex items-center gap-2">Leer ahora <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: SERVICIOS -->
+        <section id="page-services" class="page-view hidden fade-in bg-[#F9F7F4] min-h-screen">
+            <div class="relative h-[40vh] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1523482580672-01e6f2eb8ca4?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                    class="w-full h-full object-cover img-tranquil opacity-80" alt="Whitehaven Beach">
+                <div class="absolute inset-0 bg-white/60"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center max-w-2xl px-6">
+                        <span class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">Nuestros
+                            Servicios</span>
+                        <h1 class="text-4xl md:text-5xl font-medium text-[#535353] tracking-tight">Claridad legal y
+                            educativa</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-6 -mt-20 relative z-10 pb-20">
+                <div class="bg-white rounded-2xl shadow-xl p-2 md:p-4 mb-12 inline-flex">
+                    <button onclick="switchServiceTab('migracion')" id="tab-migracion"
+                        class="px-8 py-3 rounded-xl text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]">
+                        Migraciones
+                    </button>
+                    <button onclick="switchServiceTab('estudiantes')" id="tab-estudiantes"
+                        class="px-8 py-3 rounded-xl text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all">
+                        Estudiantes
+                    </button>
+                </div>
+
+                <!-- Migration Content -->
+                <div id="content-migracion" class="space-y-12">
+                    <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-[#E9E9E9]">
+                        <div class="flex flex-col md:flex-row gap-12">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Asesoría Migratoria Integral</h3>
+                                <p class="text-[#535353]/80 font-light leading-relaxed mb-8 text-lg">
+                                    Navegar el sistema migratorio australiano requiere precisión quirúrgica. No vendemos
+                                    "visas", vendemos estrategias legales basadas en la legislación actual para
+                                    maximizar tus posibilidades de éxito.
+                                </p>
+                                <div class="space-y-4">
+                                    <div
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F9F7F4] transition-colors">
+                                        <div class="mt-1 text-[#C6AB88]"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" data-lucide="check-circle-2"
+                                                class="lucide lucide-check-circle-2 w-5 h-5">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="m9 12 2 2 4-4"></path>
+                                            </svg></div>
+                                        <div>
+                                            <h4 class="font-medium text-[#535353]">Skilled Visas (189, 190, 491)</h4>
+                                            <p class="text-sm text-[#535353]/60 font-light mt-1">Evaluación de puntos y
+                                                Skills Assessment.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F9F7F4] transition-colors">
+                                        <div class="mt-1 text-[#C6AB88]"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" data-lucide="heart"
+                                                class="lucide lucide-heart w-5 h-5">
+                                                <path
+                                                    d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                                                </path>
+                                            </svg></div>
+                                        <div>
+                                            <h4 class="font-medium text-[#535353]">Partner Visas (820/801)</h4>
+                                            <p class="text-sm text-[#535353]/60 font-light mt-1">Preparación de
+                                                evidencias de relación genuina.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-10 bg-[#535353] text-white px-8 py-3 rounded-full font-medium hover:bg-black transition-colors w-full md:w-auto">
+                                    Agendar Evaluación Inicial
+                                </button>
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <div
+                                    class="bg-[#F9F7F4] p-8 rounded-2xl h-full flex flex-col justify-center text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="scale"
+                                        class="lucide lucide-scale w-12 h-12 text-[#C6AB88] mx-auto mb-6">
+                                        <path d="M12 3v18"></path>
+                                        <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"></path>
+                                        <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"></path>
+                                        <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path>
+                                        <path d="M7 21h10"></path>
+                                    </svg>
+                                    <h4 class="font-medium text-[#535353] mb-2">Código de Conducta</h4>
+                                    <p class="text-sm text-[#535353]/60 font-light mb-6">Operamos bajo el estricto
+                                        código de conducta de la autoridad migratoria (OMARA).</p>
+                                    <a href="#"
+                                        class="text-xs font-semibold text-[#535353] underline decoration-[#C6AB88]">Ver
+                                        Credenciales</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Content -->
+                <div id="content-estudiantes" class="hidden space-y-12">
+                    <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-[#E9E9E9]">
+                        <div class="flex flex-col md:flex-row gap-12">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Planificación Educativa</h3>
+                                <p class="text-[#535353]/80 font-light leading-relaxed mb-8 text-lg">
+                                    Australia ofrece educación de clase mundial. Te ayudamos a filtrar entre miles de
+                                    opciones para encontrar el curso que potencie tu perfil profesional, no solo el más
+                                    económico.
+                                </p>
+                                <div class="space-y-4">
+                                    <div
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F9F7F4] transition-colors">
+                                        <div class="mt-1 text-[#7FA5BA]"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" data-lucide="graduation-cap"
+                                                class="lucide lucide-graduation-cap w-5 h-5">
+                                                <path
+                                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                                                </path>
+                                                <path d="M22 10v6"></path>
+                                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                                            </svg></div>
+                                        <div>
+                                            <h4 class="font-medium text-[#535353]">Educación Superior &amp; VET</h4>
+                                            <p class="text-sm text-[#535353]/60 font-light mt-1">Masters, Bachelors y
+                                                cursos técnicos especializados.</p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-[#F9F7F4] transition-colors">
+                                        <div class="mt-1 text-[#7FA5BA]"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" data-lucide="file-check"
+                                                class="lucide lucide-file-check w-5 h-5">
+                                                <path
+                                                    d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z">
+                                                </path>
+                                                <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
+                                                <path d="m9 15 2 2 4-4"></path>
+                                            </svg></div>
+                                        <div>
+                                            <h4 class="font-medium text-[#535353]">Renovación de Visa (500)</h4>
+                                            <p class="text-sm text-[#535353]/60 font-light mt-1">Gestión completa de GTE
+                                                y seguro médico OSHC.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-10 bg-[#7FA5BA] text-white px-8 py-3 rounded-full font-medium hover:bg-[#6D92A6] transition-colors w-full md:w-auto">
+                                    Diseñar Plan de Estudios
+                                </button>
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                    class="w-full h-full object-cover rounded-2xl img-tranquil opacity-90"
+                                    alt="Students">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: NOSOTRAS -->
+        <section id="page-about" class="page-view hidden fade-in">
+            <div class="max-w-7xl mx-auto px-6 py-24">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">El
+                        Equipo</span>
+                    <h1 class="text-4xl md:text-5xl font-medium text-[#535353] tracking-tight mb-8">Experiencia
+                        vivida,<br>conocimiento experto.</h1>
+                    <p class="text-[#535353]/70 font-light text-lg">Somos un equipo boutique. Preferimos la calidad
+                        sobre el volumen.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-24">
+                    <!-- Profile 1 -->
+                    <div class="group">
+                        <div class="aspect-[3/4] mb-8 overflow-hidden rounded-sm relative bg-[#F0F4F6]">
+                            <!-- Placeholder for Valentina -->
+                            <div class="absolute inset-0 flex items-center justify-center text-[#535353]/20">
+                                <span class="text-xs tracking-widest uppercase">Foto de Valentina</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4">
+                                <span
+                                    class="bg-white/90 backdrop-blur px-3 py-1 text-xs font-semibold text-[#535353]">MARA
+                                    Agent</span>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl font-medium text-[#535353]">Valentina Pérez</h2>
+                        <span class="text-[#C6AB88] font-medium text-sm block mb-4">Principal Migration Agent</span>
+                        <p class="text-[#535353]/70 font-light leading-relaxed text-sm">
+                            Valentina llegó a Australia hace 10 años con una visa de estudiante. Hoy, como abogada y
+                            agente registrada, dedica su carrera a simplificar el camino que ella una vez recorrió.
+                        </p>
+                    </div>
+
+                    <!-- Profile 2 -->
+                    <div class="group">
+                        <div class="aspect-[3/4] mb-8 overflow-hidden rounded-sm relative bg-[#F9F7F4]">
+                            <!-- Placeholder for Camila -->
+                            <div class="absolute inset-0 flex items-center justify-center text-[#535353]/20">
+                                <span class="text-xs tracking-widest uppercase">Foto de Camila</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4">
+                                <span
+                                    class="bg-white/90 backdrop-blur px-3 py-1 text-xs font-semibold text-[#535353]">Education
+                                    Counsellor</span>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl font-medium text-[#535353]">Camila Rodríguez</h2>
+                        <span class="text-[#7FA5BA] font-medium text-sm block mb-4">Head of Education</span>
+                        <p class="text-[#535353]/70 font-light leading-relaxed text-sm">
+                            Especialista en alinear pasiones personales con oportunidades de mercado en Australia.
+                            Camila se asegura de que tu inversión educativa tenga un retorno real.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: RECURSOS -->
+        <section id="page-resources" class="page-view hidden fade-in bg-[#F9F7F4] min-h-screen">
+            <div class="max-w-7xl mx-auto px-6 py-24">
+                <h1 class="text-4xl font-medium text-[#535353] mb-12 tracking-tight">Biblioteca</h1>
+
+                <!-- Filter Bar -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar w-full md:w-auto">
+                        <button
+                            class="whitespace-nowrap px-5 py-2 rounded-full bg-[#535353] text-white text-xs font-medium">Todo</button>
+                        <button
+                            class="whitespace-nowrap px-5 py-2 rounded-full bg-white text-[#535353] hover:bg-[#E9E9E9] text-xs font-medium transition-colors shadow-sm">Primeros
+                            Pasos</button>
+                        <button
+                            class="whitespace-nowrap px-5 py-2 rounded-full bg-white text-[#535353] hover:bg-[#E9E9E9] text-xs font-medium transition-colors shadow-sm">Visas</button>
+                        <button
+                            class="whitespace-nowrap px-5 py-2 rounded-full bg-white text-[#535353] hover:bg-[#E9E9E9] text-xs font-medium transition-colors shadow-sm">Estilo
+                            de Vida</button>
+                    </div>
+                    <div class="relative w-full md:w-80">
+                        <input type="text" placeholder="Buscar..."
+                            class="w-full bg-white border-none rounded-full pl-6 pr-4 py-3 text-sm focus:ring-2 focus:ring-[#C6AB88]/20 outline-none shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            data-lucide="search"
+                            class="lucide lucide-search absolute right-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400">
+                            <path d="m21 21-4.34-4.34"></path>
+                            <circle cx="11" cy="11" r="8"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Article Card -->
+                    <article
+                        class="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1577017040065-6505286923ef?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
+                                alt="Coffee">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#535353]">
+                                Lifestyle</div>
+                        </div>
+                        <div class="p-8">
+                            <h3
+                                class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
+                                La cultura del café en Melbourne</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6 line-clamp-2">Más que una bebida, es una
+                                institución. Guía de los mejores barrios para baristas.</p>
+                            <span
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Leer
+                                artículo</span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card -->
+                    <article
+                        class="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1554463529-e27854014799?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
+                                alt="Documents">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#535353]">
+                                Visas</div>
+                        </div>
+                        <div class="p-8">
+                            <h3
+                                class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
+                                La carta GTE perfecta</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6 line-clamp-2">Cómo explicar tus
+                                intenciones de estudio genuinas al Departamento de Home Affairs.</p>
+                            <span
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Leer
+                                artículo</span>
+                        </div>
+                    </article>
+
+                    <!-- Article Card -->
+                    <article
+                        class="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1518182170546-0766aa6f6b7c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
+                                alt="Nature">
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-[#535353]">
+                                Viajes</div>
+                        </div>
+                        <div class="p-8">
+                            <h3
+                                class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
+                                Escapadas de fin de semana</h3>
+                            <p class="text-sm text-[#535353]/60 font-light mb-6 line-clamp-2">Lugares increíbles
+                                accesibles en tren desde Sydney y Melbourne.</p>
+                            <span
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Leer
+                                artículo</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-[#E9E9E9] pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <span class="text-xl font-medium tracking-widest text-[#535353] block mb-6">LIV<span
+                            class="text-[#C6AB88]">.</span></span>
+                    <p class="text-sm text-[#535353]/60 font-light leading-relaxed max-w-xs">
+                        Acompañamiento honesto para tu proceso migratorio y educativo en Australia.
+                    </p>
+                </div>
+
+                <div class="">
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Explorar</h4>
+                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                        <li class=""><button onclick="switchPage('home')"
+                                class="hover:text-[#C6AB88] transition-colors">Home</button></li>
+                        <li class=""><button onclick="switchPage('services')"
+                                class="hover:text-[#C6AB88] transition-colors">Servicios</button></li>
+                        <li><button onclick="switchPage('about')"
+                                class="hover:text-[#C6AB88] transition-colors">Nosotras</button></li>
+                        <li><button onclick="switchPage('resources')"
+                                class="hover:text-[#C6AB88] transition-colors">Recursos</button></li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                        <li class="">hola@livmigration.com</li>
+                        <li class="">Melbourne, VIC 3000</li>
+                        <li class="flex items-center gap-4 pt-2">
+                            <a href="#" class="text-[#535353] hover:text-[#C6AB88] transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="instagram"
+                                    class="lucide lucide-instagram w-5 h-5">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg></a>
+                            <a href="#" class="text-[#535353] hover:text-[#C6AB88] transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="linkedin"
+                                    class="lucide lucide-linkedin w-5 h-5">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Legal</h4>
+                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                        <li><a href="#" class="hover:text-[#C6AB88]">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-[#C6AB88]">Code of Conduct (OMARA)</a></li>
+                        <li><a href="#" class="hover:text-[#C6AB88]">Consumer Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-[#F9F7F4] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-[#535353]/30 font-light uppercase tracking-wide">
+                <p>© 2025 LIV Consulting. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with purpose in Australia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('fade-in');
+            });
+            const selectedPage = document.getElementById('page-' + pageId);
+            selectedPage.classList.remove('hidden');
+            void selectedPage.offsetWidth;
+            selectedPage.classList.add('fade-in');
+            window.scrollTo(0, 0);
+        }
+
+        function switchServiceTab(tabName) {
+            // Reset Buttons
+            const btnMigracion = document.getElementById('tab-migracion');
+            const btnEstudiantes = document.getElementById('tab-estudiantes');
+
+            const inactiveClass = "px-8 py-3 rounded-xl text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all";
+            const activeClass = "px-8 py-3 rounded-xl text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]";
+
+            if (tabName === 'migracion') {
+                btnMigracion.className = activeClass;
+                btnEstudiantes.className = inactiveClass;
+            } else {
+                btnMigracion.className = inactiveClass;
+                btnEstudiantes.className = activeClass;
+            }
+
+            // Toggle Content
+            document.getElementById('content-migracion').classList.add('hidden');
+            document.getElementById('content-estudiantes').classList.add('hidden');
+
+            const content = document.getElementById('content-' + tabName);
+            content.classList.remove('hidden');
+            content.classList.add('fade-in');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('-translate-x-full')) {
+                menu.classList.remove('-translate-x-full');
+            } else {
+                menu.classList.add('-translate-x-full');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
