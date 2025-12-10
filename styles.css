@@ -75,7 +75,6 @@ body {
     mix-blend-mode: difference;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     font-weight: 900;
     /* Ensure strictly bold for the effect to be visible */
 }
