@@ -88,7 +88,7 @@
                 <!-- Background Image with "Tranquility" Filters -->
                 <div class="absolute inset-0">
                     <img src="assets/opera-hero.png" alt="Sydney Opera House Soft Light"
-                        class="w-full h-full object-cover object-[50%_10%] img-tranquil opacity-90 scale-110">
+                        class="w-full h-full object-cover img-tranquil opacity-90 scale-110">
                     <!-- Gradient Overlays for Readability & Softness -->
                     <div class="absolute inset-0 hero-overlay-vertical">
                     </div>
@@ -101,44 +101,30 @@
 
                     <h1
                         class="flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-[#535353] leading-[1.1] tracking-tight mb-8">
-                        <span class="whitespace-nowrap">Migrar es un proyecto de vida,</span>
+                        <span class="whitespace-nowrap">Migrar <span class="relative px-2">
+                                <!-- HAZ DE LUZ: Ajusta w- y h- para el tamaño, bg-[#C6AB88]/ para la intensidad, y blur- para suavidad -->
+                                <span
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#C6AB88]/40 blur-[150px] rounded-full -z-10 animate-pulse pointer-events-none"></span>
+                                es
+                            </span> un proyecto de vida,</span>
                         <span class="font-black mt-2 md:mt-6 text-delight leading-none md:whitespace-nowrap" style="">un
                             cambio de
                             horizonte.</span>
                     </h1>
 
-                    <div class="relative max-w-[780px] mx-auto mb-10">
-                        <!-- Atmospheric Light Beams ("Hases de Luz") -->
-                        <div class="absolute inset-x-[-20%] inset-y-[-50%] -z-10 pointer-events-none opacity-80">
-                            <!-- Main soft center glow with backdrop blur -->
-                            <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/40 blur-[80px] backdrop-blur-md rounded-full">
-                            </div>
-                            <!-- Side beams -->
-                            <div
-                                class="absolute top-[20%] left-[10%] w-[60%] h-[80%] bg-white/20 blur-[60px] backdrop-blur-sm rounded-full rotate-[-15deg]">
-                            </div>
-                            <div
-                                class="absolute bottom-[20%] right-[10%] w-[60%] h-[80%] bg-white/20 blur-[60px] backdrop-blur-sm rounded-full rotate-[15deg]">
-                            </div>
-                        </div>
-
-                        <p class="text-lg md:text-xl text-[#535353] font-medium leading-relaxed relative z-10">
-                            En LIV integramos educación y migración para que puedas decidir con información completa y
-                            sin
-                            falsas promesas. Te acompañamos a ordenar posibilidades, riesgos y próximos pasos con una
-                            mirada
-                            humana y profesional.
-                        </p>
-                    </div>
+                    <p class="text-lg md:text-xl text-[#fff]/90 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                        Honestidad radical y diseño de estrategias legales para tu nueva vida en Australia. Sin falsas
+                        promesas.
+                    </p>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
-                            class="btn-primary">
-                            Hablar sobre mi situación
+                            class="w-full sm:w-auto bg-[#535353] hover:bg-black text-white px-8 py-4 rounded-full font-medium shadow-xl shadow-gray-200/50 transition-all hover:-translate-y-1 block sm:inline-block text-center">
+                            Consulta Migratoria
                         </a>
-                        <a href="servicios.html" class="btn-secondary">
-                            Cómo trabajamos
+                        <a href="servicios.html"
+                            class="w-full sm:w-auto bg-white/80 backdrop-blur hover:bg-white text-[#535353] px-8 py-4 rounded-full font-medium shadow-lg shadow-gray-100 transition-all hover:-translate-y-1 border border-white text-center">
+                            Explorar Servicios
                         </a>
                     </div>
                 </div>
