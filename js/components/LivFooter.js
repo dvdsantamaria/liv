@@ -9,8 +9,7 @@ class LivFooter extends HTMLElement {
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
-                    <span class="text-xl font-medium tracking-widest text-[#535353] block mb-6">LIV<span
-                            class="text-[#C6AB88]">.</span></span>
+                    <img src="assets/isologo.svg" alt="LIV Logo" class="h-8 mb-6 block">
                     <p class="text-sm text-[#535353]/60 font-light leading-relaxed max-w-xs mb-3">
                         Acompañamiento honesto para tu proceso migratorio y educativo en Australia.
                     </p>
@@ -32,10 +31,10 @@ class LivFooter extends HTMLElement {
                 <div class="">
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Contacto</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
-                        <li class="">hola@livmigration.com</li>
-                        <li class="">Melbourne, VIC 3000</li>
+                        <li class="">hello@livmigration.com.au</li>
+                        <li class="">Sydney 2026, NSW, Australia</li>
                         <li class="flex items-center gap-4 pt-2">
-                            <a href="#" class="text-[#535353] hover:text-[#C6AB88] transition-colors"><svg
+                            <a href="https://www.instagram.com/livmigration/" target="_blank" class="text-[#535353] hover:text-[#C6AB88] transition-colors"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" data-lucide="instagram"
@@ -71,8 +70,8 @@ class LivFooter extends HTMLElement {
 
             <div
                 class="border-t border-[#F9F7F4] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-[#535353]/30 font-light uppercase tracking-wide">
-                <p>© 2025 LIV Consulting. All rights reserved.</p>
-                <p class="mt-2 md:mt-0">Designed with purpose in Australia.</p>
+                <p>© ${new Date().getFullYear()} LIV Consulting. All rights reserved.</p>
+                <p class="mt-2 md:mt-0"><a href="https://doopux.com" target="_blank" class="hover:text-[#C6AB88] transition-colors">Designed with purpose in Australia.</a></p>
             </div>
         </div>
     </footer>

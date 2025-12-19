@@ -88,7 +88,7 @@
                 <!-- Background Image with "Tranquility" Filters -->
                 <div class="absolute inset-0">
                     <img src="assets/opera-hero.png" alt="Sydney Opera House Soft Light"
-                        class="w-full h-full object-cover img-tranquil opacity-90 scale-110">
+                        class="w-full h-full object-cover object-[50%_10%] img-tranquil opacity-90 scale-110">
                     <!-- Gradient Overlays for Readability & Softness -->
                     <div class="absolute inset-0 hero-overlay-vertical">
                     </div>
@@ -107,19 +107,37 @@
                             horizonte.</span>
                     </h1>
 
-                    <p class="text-lg md:text-xl text-[#fff]/90 font-light max-w-2xl mx-auto leading-relaxed mb-10">
-                        En LIV integramos educación y migración para que puedas decidir con información completa y sin
-                        falsas promesas. Te acompañamos a ordenar posibilidades, riesgos y próximos pasos con una mirada
-                        humana y profesional.
-                    </p>
+                    <div class="relative max-w-[780px] mx-auto mb-10">
+                        <!-- Atmospheric Light Beams ("Hases de Luz") -->
+                        <div class="absolute inset-x-[-20%] inset-y-[-50%] -z-10 pointer-events-none">
+                            <!-- Main soft center glow -->
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/40 blur-[80px] rounded-full">
+                            </div>
+                            <!-- Side beams -->
+                            <div
+                                class="absolute top-[20%] left-[10%] w-[60%] h-[80%] bg-white/30 blur-[60px] rounded-full rotate-[-15deg]">
+                            </div>
+                            <div
+                                class="absolute bottom-[20%] right-[10%] w-[60%] h-[80%] bg-white/30 blur-[60px] rounded-full rotate-[15deg]">
+                            </div>
+                        </div>
+
+                        <p class="text-lg md:text-xl text-[#535353] font-medium leading-relaxed relative z-10">
+                            En LIV integramos educación y migración para que puedas decidir con información completa y
+                            sin
+                            falsas promesas. Te acompañamos a ordenar posibilidades, riesgos y próximos pasos con una
+                            mirada
+                            humana y profesional.
+                        </p>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
-                            class="w-full sm:w-auto bg-[#535353] hover:bg-black text-white px-8 py-4 rounded-full font-medium shadow-xl shadow-gray-200/50 transition-all hover:-translate-y-1 block sm:inline-block text-center">
+                            class="btn-primary">
                             Hablar sobre mi situación
                         </a>
-                        <a href="servicios.html"
-                            class="w-full sm:w-auto bg-white/80 backdrop-blur hover:bg-white text-[#535353] px-8 py-4 rounded-full font-medium shadow-lg shadow-gray-100 transition-all hover:-translate-y-1 border border-white block sm:inline-block text-center">
+                        <a href="servicios.html" class="btn-secondary">
                             Cómo trabajamos
                         </a>
                     </div>
@@ -248,17 +266,19 @@
                             </p>
                             <ul class="space-y-3 mb-8 text-[#535353]/70 font-light text-sm">
                                 <li class="flex items-start gap-3">
-                                    <span class="text-[#C6AB88] mt-0.5">•</span>
+                                    <span class="custom-bullet"></span>
                                     <span>Te damos información clara y completa, incluso cuando no es lo que esperabas
                                         escuchar.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="text-[#C6AB88] mt-0.5">•</span>
+                                    <span
+                                        class="w-2 h-2 rounded-full border border-[#aabba0] bg-[#C6AB88]/20 mt-1.5 flex-shrink-0 block"></span>
                                     <span>Integramos educación y migración en una estrategia coherente, según tu perfil
                                         real.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="text-[#C6AB88] mt-0.5">•</span>
+                                    <span
+                                        class="w-2 h-2 rounded-full border border-[#aabba0] bg-[#C6AB88]/20 mt-1.5 flex-shrink-0 block"></span>
                                     <span>Te acompañamos con criterio, orden y humanidad, sin urgencias ni promesas
                                         vacías.</span>
                                 </li>

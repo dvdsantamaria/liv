@@ -36,8 +36,8 @@
         <!-- Servicios Page -->
         <section class="bg-[#F9F7F4] min-h-screen pt-20">
             <div class="relative h-[40vh] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1523482580672-01e6f2eb8ca4?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
-                    class="w-full h-full object-cover img-tranquil opacity-80" alt="Whitehaven Beach">
+                <img src="/assets/stairs.jpg" class="w-full h-full object-cover img-tranquil opacity-80"
+                    alt="Stairs at Sydney">
                 <div class="absolute inset-0 bg-white/60"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center max-w-2xl px-6">
@@ -50,16 +50,18 @@
                 </div>
             </div>
 
-            <div class="max-w-5xl mx-auto px-6 -mt-20 relative z-10 pb-20">
-                <div class="bg-white rounded-2xl shadow-xl p-2 md:p-4 mb-12 inline-flex">
-                    <button onclick="switchServiceTab('migracion')" id="tab-migracion"
-                        class="px-8 py-3 rounded-xl text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]">
-                        Migraciones
-                    </button>
-                    <button onclick="switchServiceTab('estudiantes')" id="tab-estudiantes"
-                        class="px-8 py-3 rounded-xl text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all">
-                        Estudiantes
-                    </button>
+            <div class="max-w-5xl mx-auto px-6 py-12">
+                <div class="flex justify-center mb-12">
+                    <div class="bg-white p-1.5 rounded-full inline-flex border border-[#E9E9E9] shadow-sm">
+                        <button onclick="switchServiceTab('migracion')" id="tab-migracion"
+                            class="px-8 py-3 rounded-full text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]">
+                            Migraciones
+                        </button>
+                        <button onclick="switchServiceTab('estudiantes')" id="tab-estudiantes"
+                            class="px-8 py-3 rounded-full text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all">
+                            Estudiantes
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Migration Content -->
@@ -201,9 +203,9 @@
                                 </a>
                             </div>
                             <div class="w-full md:w-1/3">
-                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                <img src="/assets/sydney-bridge.jpg"
                                     class="w-full h-full object-cover rounded-2xl img-tranquil opacity-90"
-                                    alt="Estudiantes en campus universitario">
+                                    alt="Sydney harbour bridge">
                             </div>
                         </div>
                     </div>
@@ -224,8 +226,8 @@
             const btnMigracion = document.getElementById('tab-migracion');
             const btnEstudiantes = document.getElementById('tab-estudiantes');
 
-            const inactiveClass = "px-8 py-3 rounded-xl text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all";
-            const activeClass = "px-8 py-3 rounded-xl text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]";
+            const inactiveClass = "px-8 py-3 rounded-full text-sm font-medium text-[#535353]/50 hover:text-[#535353] transition-all";
+            const activeClass = "px-8 py-3 rounded-full text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]";
 
             if (tabName === 'migracion') {
                 btnMigracion.className = activeClass;
