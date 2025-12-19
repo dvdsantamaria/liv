@@ -4,6 +4,10 @@ class LivHeader extends HTMLElement {
     }
 
     connectedCallback() {
+        // Determine root path handling for both local server and file protocol
+        const isArticlePage = window.location.pathname.includes('/articulos/');
+        const rootPath = isArticlePage ? '../' : '';
+
         this.innerHTML = `
     <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-panel border-b-0">
         <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
@@ -20,8 +24,8 @@ class LivHeader extends HTMLElement {
 
             <!-- Logo -->
             <div class="flex-1 md:flex-none text-center md:text-left">
-                <a href="index-v3.html" class="inline-block hover:opacity-80 transition-opacity">
-                    <img src="assets/logo.svg" alt="LIV Migration Logo" class="h-8 w-auto object-contain">
+                <a href="${rootPath}index-v3.html" class="inline-block hover:opacity-80 transition-opacity">
+                    <img src="${rootPath}assets/logo.svg" alt="LIV Migration Logo" class="h-8 w-auto object-contain">
                 </a>
             </div>
 
@@ -67,7 +71,7 @@ class LivHeader extends HTMLElement {
             <!-- Mobile Menu Header -->
             <div class="flex items-center justify-between px-6 h-20 shrink-0 border-b border-[#535353]/5">
                 <div class="w-10"></div> <!-- Spacer for aesthetic centering -->
-                <img src="assets/logo.svg" alt="LIV Migration Logo" class="h-8 w-auto object-contain">
+                <img src="${rootPath}assets/logo.svg" alt="LIV Migration Logo" class="h-8 w-auto object-contain">
                 <button onclick="toggleMobileMenu()" class="p-2 text-[#535353]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -81,10 +85,10 @@ class LivHeader extends HTMLElement {
             <!-- Mobile Menu Content -->
             <div class="flex-1 flex flex-col items-center justify-center space-y-8 pb-20">
                 <div class="flex flex-col space-y-6 text-2xl font-light text-[#535353] text-center">
-                    <a href="index-v3.html" class="text-center font-medium hover:text-[#C6AB88] transition-colors">Home</a>
-                    <a href="servicios.html" class="text-center hover:text-[#C6AB88] transition-colors">Servicios</a>
-                    <a href="nosotras.html" class="text-center hover:text-[#C6AB88] transition-colors">Nosotras</a>
-                    <a href="recursos.html" class="text-center hover:text-[#C6AB88] transition-colors">Recursos</a>
+                    <a href="${rootPath}index-v3.html" class="text-center font-medium hover:text-[#C6AB88] transition-colors">Home</a>
+                    <a href="${rootPath}servicios.html" class="text-center hover:text-[#C6AB88] transition-colors">Servicios</a>
+                    <a href="${rootPath}nosotras.html" class="text-center hover:text-[#C6AB88] transition-colors">Nosotras</a>
+                    <a href="${rootPath}recursos.html" class="text-center hover:text-[#C6AB88] transition-colors">Recursos</a>
                 </div>
                 <div class="pt-8 border-t border-[#535353]/10 w-64">
                     <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
@@ -102,9 +106,14 @@ class LivHeader extends HTMLElement {
 
         links.forEach(link => {
             const href = link.getAttribute('href');
-            if (href && (href === currentPath || (currentPath === '' && href === 'index-v3.html'))) {
+            // Check if matches or if it's the root link and we're on root
+            // Since we added rootPath, href will include it. We need to strip it to compare, or compare smarter.
+            // Actually, we just want to know if the filename matches.
+
+            // Simple check: does the href end with the current filename?
+            if (href && href.endsWith(currentPath)) {
                 link.classList.add('font-medium');
-                link.classList.remove('font-light'); // Ensure it stands out if we use font weights
+                link.classList.remove('font-light');
             } else {
                 link.classList.remove('font-medium');
             }

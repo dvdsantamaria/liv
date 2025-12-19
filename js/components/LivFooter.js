@@ -4,12 +4,16 @@ class LivFooter extends HTMLElement {
     }
 
     connectedCallback() {
+        // Determine root path handling for both local server and file protocol
+        const isArticlePage = window.location.pathname.includes('/articulos/');
+        const rootPath = isArticlePage ? '../' : '';
+
         this.innerHTML = `
     <footer class="bg-white border-t border-[#E9E9E9] pt-20 pb-10 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
-                    <img src="assets/isologo.svg" alt="LIV Logo" class="h-8 mb-6 block">
+                    <img src="${rootPath}assets/isologo.svg" alt="LIV Logo" class="h-8 mb-6 block">
                     <p class="text-sm text-[#535353]/60 font-light leading-relaxed max-w-xs mb-3">
                         Acompañamiento honesto para tu proceso migratorio y educativo en Australia.
                     </p>
@@ -21,10 +25,10 @@ class LivFooter extends HTMLElement {
                 <div class="">
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Explorar</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
-                        <li><a href="index-v3.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
-                        <li><a href="servicios.html" class="hover:text-[#C6AB88] transition-colors">Servicios</a></li>
-                        <li><a href="nosotras.html" class="hover:text-[#C6AB88] transition-colors">Nosotras</a></li>
-                        <li><a href="recursos.html" class="hover:text-[#C6AB88] transition-colors">Recursos</a></li>
+                        <li><a href="${rootPath}index-v3.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
+                        <li><a href="${rootPath}servicios.html" class="hover:text-[#C6AB88] transition-colors">Servicios</a></li>
+                        <li><a href="${rootPath}nosotras.html" class="hover:text-[#C6AB88] transition-colors">Nosotras</a></li>
+                        <li><a href="${rootPath}recursos.html" class="hover:text-[#C6AB88] transition-colors">Recursos</a></li>
                     </ul>
                 </div>
 
