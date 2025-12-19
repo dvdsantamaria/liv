@@ -109,17 +109,17 @@
 
                     <div class="relative max-w-[780px] mx-auto mb-10">
                         <!-- Atmospheric Light Beams ("Hases de Luz") -->
-                        <div class="absolute inset-x-[-20%] inset-y-[-50%] -z-10 pointer-events-none">
-                            <!-- Main soft center glow -->
+                        <div class="absolute inset-x-[-20%] inset-y-[-50%] -z-10 pointer-events-none opacity-80">
+                            <!-- Main soft center glow with backdrop blur -->
                             <div
-                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/40 blur-[80px] rounded-full">
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/40 blur-[80px] backdrop-blur-md rounded-full">
                             </div>
                             <!-- Side beams -->
                             <div
-                                class="absolute top-[20%] left-[10%] w-[60%] h-[80%] bg-white/30 blur-[60px] rounded-full rotate-[-15deg]">
+                                class="absolute top-[20%] left-[10%] w-[60%] h-[80%] bg-white/20 blur-[60px] backdrop-blur-sm rounded-full rotate-[-15deg]">
                             </div>
                             <div
-                                class="absolute bottom-[20%] right-[10%] w-[60%] h-[80%] bg-white/30 blur-[60px] rounded-full rotate-[15deg]">
+                                class="absolute bottom-[20%] right-[10%] w-[60%] h-[80%] bg-white/20 blur-[60px] backdrop-blur-sm rounded-full rotate-[15deg]">
                             </div>
                         </div>
 
