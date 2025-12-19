@@ -53,7 +53,7 @@ class LivHeader extends HTMLElement {
                 </a>
             </div>
 
-            <button class="md:hidden text-[#535353] p-2">
+            <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank" class="md:hidden text-[#535353] p-2 hover:bg-black/5 rounded-lg transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     data-lucide="calendar" class="lucide lucide-calendar w-5 h-5">
@@ -62,7 +62,7 @@ class LivHeader extends HTMLElement {
                     <rect width="18" height="18" x="3" y="4" rx="2"></rect>
                     <path d="M3 10h18"></path>
                 </svg>
-            </button>
+            </a>
         </div>
 
         <!-- Mobile Menu -->
