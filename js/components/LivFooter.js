@@ -64,7 +64,7 @@ class LivFooter extends HTMLElement {
 
                 <div>
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Legal</h4>
-                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                    <ul class="space-y-3 text-sm text-[#535353]/80 font-light">
                         <li><a href="#" class="hover:text-[#C6AB88]">Política de Privacidad</a></li>
                         <li><a href="#" class="hover:text-[#C6AB88]">Code of Conduct (OMARA)</a></li>
                         <li><a href="#" class="hover:text-[#C6AB88]">Consumer Guide</a></li>
@@ -73,7 +73,7 @@ class LivFooter extends HTMLElement {
             </div>
 
             <div
-                class="border-t border-[#F9F7F4] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-[#535353]/30 font-light uppercase tracking-wide">
+                class="border-t border-[#F9F7F4] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-[#535353]/70 font-light uppercase tracking-wide">
                 <p>© ${new Date().getFullYear()} LIV Consulting. All rights reserved.</p>
                 <p class="mt-2 md:mt-0"><a href="https://doopux.com" target="_blank" class="hover:text-[#C6AB88] transition-colors">Designed with purpose in Australia.</a></p>
             </div>
