@@ -31,7 +31,7 @@ class LivHeader extends HTMLElement {
 
             <div class="hidden md:flex items-center gap-6 pl-8">
                 <!-- Language Selector -->
-                <div class="flex items-center gap-4 text-[10px] font-medium tracking-widest text-[#535353]/60">
+                <div class="flex items-center gap-4 text-[10px] font-medium tracking-widest text-[#535353]/75">
                     <button class="flex items-center gap-2 opacity-100 hover:opacity-70 transition-all group"
                         aria-label="Cambiar a Español">
                         <img src="https://flagcdn.com/w40/es.png" alt="Bandera de España"

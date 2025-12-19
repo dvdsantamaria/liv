@@ -14,17 +14,17 @@ class LivFooter extends HTMLElement {
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="md:col-span-1">
                     <img src="${rootPath}assets/isologo.svg" alt="LIV Logo" class="h-8 mb-6 block">
-                    <p class="text-sm text-[#535353]/60 font-light leading-relaxed max-w-xs mb-3">
+                    <p class="text-sm text-[#535353]/75 font-light leading-relaxed max-w-xs mb-3">
                         Acompañamiento honesto para tu proceso migratorio y educativo en Australia.
                     </p>
-                    <p class="text-xs text-[#535353]/40 font-light italic max-w-xs">
+                    <p class="text-xs text-[#535353]/70 font-light italic max-w-xs">
                         No te vendemos Australia. Te ayudamos a pensar tu camino.
                     </p>
                 </div>
 
                 <div class="">
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Explorar</h4>
-                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                    <ul class="space-y-3 text-sm text-[#535353]/75 font-light">
                         <li><a href="${rootPath}index-v3.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
                         <li><a href="${rootPath}servicios.html" class="hover:text-[#C6AB88] transition-colors">Servicios</a></li>
                         <li><a href="${rootPath}nosotras.html" class="hover:text-[#C6AB88] transition-colors">Nosotras</a></li>
@@ -34,7 +34,7 @@ class LivFooter extends HTMLElement {
 
                 <div class="">
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Contacto</h4>
-                    <ul class="space-y-3 text-sm text-[#535353]/60 font-light">
+                    <ul class="space-y-3 text-sm text-[#535353]/75 font-light">
                         <li class="">hello@livmigration.com.au</li>
                         <li class="">Sydney 2026, NSW, Australia</li>
                         <li class="flex items-center gap-4 pt-2">
