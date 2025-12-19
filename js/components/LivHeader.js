@@ -88,7 +88,7 @@ class LivHeader extends HTMLElement {
                     <a href="${rootPath}index-v3.html" class="text-center font-medium hover:text-[#C6AB88] transition-colors">Home</a>
                     <a href="${rootPath}servicios.html" class="text-center hover:text-[#C6AB88] transition-colors">Servicios</a>
                     <a href="${rootPath}nosotras.html" class="text-center hover:text-[#C6AB88] transition-colors">Nosotras</a>
-                    <a href="${rootPath}recursos.html" class="text-center hover:text-[#C6AB88] transition-colors">Recursos</a>
+                    <a href="${rootPath}recursos.html" class="text-center hover:text-[#C6AB88] transition-colors">Info</a>
                 </div>
                 <div class="pt-8 border-t border-[#535353]/10 w-64">
                     <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"

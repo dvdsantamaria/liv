@@ -28,7 +28,7 @@ class LivFooter extends HTMLElement {
                         <li><a href="${rootPath}index-v3.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
                         <li><a href="${rootPath}servicios.html" class="hover:text-[#C6AB88] transition-colors">Servicios</a></li>
                         <li><a href="${rootPath}nosotras.html" class="hover:text-[#C6AB88] transition-colors">Nosotras</a></li>
-                        <li><a href="${rootPath}recursos.html" class="hover:text-[#C6AB88] transition-colors">Recursos</a></li>
+                        <li><a href="${rootPath}recursos.html" class="hover:text-[#C6AB88] transition-colors">Info</a></li>
                     </ul>
                 </div>
 
