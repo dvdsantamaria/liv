@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La cultura del café en Sydney | LIV Migration Australia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link id="all-fonts-link-font-playfair" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap">
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-[#C6AB88] selection:text-white">
+
+    <script src="../js/components/LivHeader.js" type="module"></script>
+    <script src="../js/components/LivFooter.js" type="module"></script>
+
+    <liv-header></liv-header>
+
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] overflow-hidden">
+            <img src="../assets/sydney.jpg" alt="La cultura del café en Sydney"
+                class="w-full h-full object-cover img-tranquil">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 md:p-16">
+                <div class="max-w-4xl mx-auto">
+                    <span
+                        class="inline-block bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-[#535353] mb-4">Estilo
+                        de Vida</span>
+                    <h1 class="text-4xl md:text-5xl font-medium text-white mb-4">La cultura del café en Sydney</h1>
+                    <p class="text-white/90 text-lg font-light">Más que una bebida, es una institución. Guía de los
+                        mejores barrios para baristas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="bg-[#F9F7F4] py-16">
+            <div class="max-w-4xl mx-auto px-6">
+                <article class="prose prose-lg max-w-none">
+                    <!-- Article content will go here -->
+                    <p class="text-[#535353]/60 italic">Contenido del artículo próximamente...</p>
+                </article>
+
+                <!-- Back Button -->
+                <div class="mt-12 pt-8 border-t border-[#535353]/10">
+                    <a href="../recursos.html"
+                        class="inline-flex items-center gap-2 text-[#535353] hover:text-[#C6AB88] transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        Volver a Recursos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <liv-footer></liv-footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
