@@ -48,7 +48,7 @@ class LivHeader extends HTMLElement {
                 </div>
 
                 <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
-                    class="bg-[#535353] hover:bg-[#3d3d3d] text-white text-xs font-medium px-6 py-3 rounded-full shadow-lg shadow-gray-200 transition-all transform hover:scale-[1.02]">
+                    class="bg-[#697C69] hover:bg-[#3d3d3d] text-white text-xs font-medium px-6 py-3 rounded-full transition-all transform hover:scale-[1.02]">
                     Conversar con nosotras
                 </a>
             </div>
@@ -92,7 +92,7 @@ class LivHeader extends HTMLElement {
                 </div>
                 <div class="pt-8 border-t border-[#535353]/10 w-64">
                     <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
-                        class="w-full bg-[#535353] hover:bg-[#3d3d3d] text-white py-4 rounded-full font-medium block text-center transition-colors">Conversar con
+                        class="w-full bg-[#697C69] hover:bg-[#3d3d3d] text-white py-4 rounded-full font-medium block text-center transition-colors">Conversar con
                         nosotras</a>
                 </div>
             </div>
