@@ -43,14 +43,14 @@ class LivHeader extends HTMLElement {
             <div class="hidden md:flex items-center gap-6 pl-8">
                 <!-- Language Selector -->
                 <div class="flex items-center gap-4 text-[10px] font-medium tracking-widest text-[#535353]/75">
-                    <a href="${esHomeHref}" class="flex items-center gap-2 ${isEnglish ? 'opacity-40 hover:opacity-100' : 'opacity-100 hover:opacity-70'} transition-all group"
+                    <a href="${esHomeHref}" data-lang-choice="es" class="flex items-center gap-2 ${isEnglish ? 'opacity-40 hover:opacity-100' : 'opacity-100 hover:opacity-70'} transition-all group"
                         aria-label="${labels.esLabel}">
                         <img src="https://flagcdn.com/w40/es.png" alt="Bandera de España"
                             class="h-3 w-5 object-cover rounded-[2px] shadow-sm opacity-90 group-hover:opacity-100 transition-opacity">
                         <span class="text-[#535353]">ES</span>
                     </a>
                     <div class="h-3 w-px bg-[#535353]/10"></div>
-                    <a href="${enHomeHref}" class="flex items-center gap-2 ${isEnglish ? 'opacity-100 hover:opacity-70' : 'opacity-40 hover:opacity-100'} transition-all group"
+                    <a href="${enHomeHref}" data-lang-choice="en" class="flex items-center gap-2 ${isEnglish ? 'opacity-100 hover:opacity-70' : 'opacity-40 hover:opacity-100'} transition-all group"
                         aria-label="${labels.enLabel}">
                         <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"
                             class="h-3 w-5 object-cover rounded-[2px] shadow-sm opacity-80 group-hover:opacity-100 transition-opacity">
@@ -94,16 +94,33 @@ class LivHeader extends HTMLElement {
             </div>
             
             <!-- Mobile Menu Content -->
-            <div class="flex-1 flex flex-col items-center justify-center space-y-8 pb-20">
-                <div class="flex flex-col space-y-6 text-2xl font-light text-[#535353] text-center">
-                    <a href="${homeHref}" class="text-center font-medium hover:text-[#C6AB88] transition-colors">Home</a>
-                    <a href="${servicesHref}" class="text-center hover:text-[#C6AB88] transition-colors">${labels.services}</a>
-                    <a href="${aboutHref}" class="text-center hover:text-[#C6AB88] transition-colors">${labels.about}</a>
-                    <a href="${infoHref}" class="text-center hover:text-[#C6AB88] transition-colors">Info</a>
+            <div class="flex-1 flex flex-col items-center px-6 pb-8">
+                <div class="flex-1 flex items-center justify-center">
+                    <div class="flex flex-col space-y-6 text-2xl font-light text-[#535353] text-center">
+                        <a href="${homeHref}" class="text-center font-medium hover:text-[#C6AB88] transition-colors">Home</a>
+                        <a href="${servicesHref}" class="text-center hover:text-[#C6AB88] transition-colors">${labels.services}</a>
+                        <a href="${aboutHref}" class="text-center hover:text-[#C6AB88] transition-colors">${labels.about}</a>
+                        <a href="${infoHref}" class="text-center hover:text-[#C6AB88] transition-colors">Info</a>
+                    </div>
                 </div>
-                <div class="pt-8 border-t border-[#535353]/10 w-64">
+                <div class="mt-auto flex w-full flex-col items-center gap-6">
                     <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
-                        class="w-full bg-[#697C69] hover:bg-[#3d3d3d] text-white py-4 rounded-full font-medium block text-center transition-colors">${labels.cta}</a>
+                        class="w-full max-w-64 bg-[#697C69] hover:bg-[#3d3d3d] text-white py-4 rounded-full font-medium block text-center transition-colors">${labels.cta}</a>
+                    <div class="flex items-center justify-center gap-5 border-t border-[#535353]/10 pt-5 text-[11px] font-medium tracking-widest text-[#535353]/75">
+                        <a href="${esHomeHref}" data-lang-choice="es" class="flex items-center gap-2 ${isEnglish ? 'opacity-50 hover:opacity-100' : 'opacity-100'} transition-all"
+                            aria-label="${labels.esLabel}">
+                            <img src="https://flagcdn.com/w40/es.png" alt="Bandera de España"
+                                class="h-4 w-6 object-cover rounded-[2px] shadow-sm">
+                            <span>ES</span>
+                        </a>
+                        <div class="h-4 w-px bg-[#535353]/15"></div>
+                        <a href="${enHomeHref}" data-lang-choice="en" class="flex items-center gap-2 ${isEnglish ? 'opacity-100' : 'opacity-50 hover:opacity-100'} transition-all"
+                            aria-label="${labels.enLabel}">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag"
+                                class="h-4 w-6 object-cover rounded-[2px] shadow-sm">
+                            <span>EN</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,6 +144,16 @@ class LivHeader extends HTMLElement {
             } else {
                 link.classList.remove('font-medium');
             }
+        });
+
+        this.querySelectorAll('[data-lang-choice]').forEach(link => {
+            link.addEventListener('click', () => {
+                try {
+                    window.localStorage.setItem('livPreferredLanguage', link.dataset.langChoice);
+                } catch (error) {
+                    // Continue navigation even if storage is unavailable.
+                }
+            });
         });
 
         // Define toggle function globally if not exists
