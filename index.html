@@ -4,72 +4,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIV Migration - Australia</title>
+    <title>LIV Migration | Australia</title>
     <link rel="icon" href="assets/isologo.svg" type="image/svg+xml">
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #fff;
-            color: #333;
-        }
 
-        img {
-            max-width: 250px;
-            height: auto;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&amp;display=swap"
+        rel="stylesheet">
 
-        .container {
-            text-align: center;
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        .contact-group {
-            margin-bottom: 2rem;
-        }
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/language-redirect.js"></script>
 
-        .label {
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.75rem;
-            color: #999;
-            margin-bottom: 0.5rem;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 300;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+    <link id="all-fonts-link-font-geist" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
 
-        a:hover {
-            color: #000;
-            text-decoration: underline;
-        }
-    </style>
+    <link id="all-fonts-link-font-roboto" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-poppins" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-playfair" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+
+    <link id="all-fonts-link-font-instrument-serif" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-merriweather" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap">
+
+    <link id="all-fonts-link-font-bricolage" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-jakarta" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-manrope" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-space-grotesk" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-work-sans" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap">
+
+    <link id="all-fonts-link-font-pt-serif" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-geist-mono" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-space-mono" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-quicksand" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap">
+
+    <link id="all-fonts-link-font-nunito" rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap">
+
 </head>
 
-<body>
-    <div class="container">
-        <img src="assets/isologo.jpg" alt="LIV Consulting">
+<body class="flex flex-col min-h-screen selection:bg-[#C6AB88] selection:text-white">
 
-        <div class="contact-group">
-            <span class="label">Migration</span>
-            <a href="mailto:veronica@liv-consulting.com.au">veronica@liv-consulting.com.au</a>
-        </div>
+    <script src="js/components/LivHeader.js" type="module"></script>
+    <script src="js/components/LivFooter.js" type="module"></script>
 
-        <div class="contact-group">
-            <span class="label">Student</span>
-            <a href="mailto:lina@liv-consulting.com.au">lina@liv-consulting.com.au</a>
-        </div>
-    </div>
+
+    <liv-header></liv-header>
+
+    <main class="flex-grow">
+
+
+        <section id="page-home" class="page-view fade-in">
+
+
+            <div class="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+
+                <div class="absolute inset-0">
+                    <img src="assets/opera-hero.png" alt="Sydney Opera House Soft Light"
+                        class="w-full h-full object-cover img-tranquil opacity-90 scale-110 md:scale-100">
+
+                    <div class="absolute inset-0 hero-overlay-vertical">
+                    </div>
+                    <div class="hero-overlay-horizontal absolute top-0 right-0 bottom-0 left-0">
+                    </div>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto px-6 text-center pt-20">
+
+
+                    <h1
+                        class="flex flex-col items-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium text-[#535353] leading-[1.1] tracking-tight mb-8">
+                        <span class="relative z-10 md:whitespace-nowrap">
+
+                            <span
+                                class="hidden md:block absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#C6AB88]/60 blur-[100px] rounded-full z-0 pointer-events-none"></span>
+                            <span class="relative z-10">Migrar es un proyecto de vida,</span>
+                        </span>
+                        <span class="font-black mt-2 md:mt-6 text-delight leading-none md:whitespace-nowrap">un
+                            cambio de
+                            horizonte.</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-[#fff]/90 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                        Honestidad radical y diseño de estrategias legales para tu nueva vida en Australia. Sin falsas
+                        promesas.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
+                            class="w-full sm:w-auto bg-[#697C69] hover:bg-black text-white px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1 block sm:inline-block text-center">
+                            Consulta Migratoria
+                        </a>
+                        <a href="servicios.html"
+                            class="w-full sm:w-auto bg-white/80 backdrop-blur hover:bg-white text-[#535353] px-8 py-4 rounded-full font-medium transition-all hover:-translate-y-1 border border-white text-center">
+                            Explorar Servicios
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-40">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        data-lucide="arrow-down" class="lucide lucide-arrow-down w-5 h-5 text-[#535353]">
+                        <path d="M12 5v14"></path>
+                        <path d="m19 12-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="w-full bg-[#F9F7F4]">
+                <div class="max-w-7xl mx-auto px-6 py-32">
+
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-medium text-[#535353] mb-4 tracking-tight">Dos caminos, un
+                            mismo enfoque: claridad y estrategia.</h2>
+                        <p class="text-[#535353]/70 font-light text-lg max-w-2xl mx-auto">No todas las personas
+                            necesitan lo mismo. Por eso trabajamos de forma artesanal: escuchamos, analizamos y
+                            proponemos un plan realista según tu historia y objetivos.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+
+                        <a href="servicios.html"
+                            class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 img-tranquil"
+                                alt="Costa australiana al atardecer">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/60 to-transparent text-white">
+                                <div class="flex items-center gap-3 mb-3 opacity-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="plane" class="lucide lucide-plane w-5 h-5">
+                                        <path
+                                            d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-xs font-semibold tracking-widest uppercase">Para quienes quieren
+                                        construir un camino viable</span>
+                                </div>
+                                <h2 class="text-3xl font-medium mb-3">Migración con estrategia</h2>
+                                <p
+                                    class="text-white/80 font-light text-sm max-w-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                    Analizamos tu perfil, tu contexto y tus posibilidades reales. Si hay un camino, lo
+                                    diseñamos con pasos claros. Si no lo hay, te lo decimos con honestidad.
+                                </p>
+                                <div class="mt-6 flex items-center gap-2 text-sm font-medium">
+                                    <span>Ver cómo abordamos migración</span> <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a href="servicios.html"
+                            class="group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&amp;w=1974&amp;auto=format&amp;fit=crop"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 img-tranquil"
+                                alt="Estudiantes en campus universitario">
+                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors"></div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-black/60 to-transparent text-white">
+                                <div class="flex items-center gap-3 mb-3 opacity-90">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" data-lucide="book-open"
+                                        class="lucide lucide-book-open w-5 h-5">
+                                        <path d="M12 7v14"></path>
+                                        <path
+                                            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-xs font-semibold tracking-widest uppercase">Estudiar como parte de
+                                        un proyecto</span>
+                                </div>
+                                <h2 class="text-3xl font-medium mb-3">Educación con propósito</h2>
+                                <p
+                                    class="text-white/80 font-light text-sm max-w-md opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                    No vendemos cursos. Evaluamos cuándo estudiar tiene sentido y cómo alinearlo a una
+                                    estrategia migratoria o profesional que te sostenga en el tiempo.
+                                </p>
+                                <div class="mt-6 flex items-center gap-2 text-sm font-medium">
+                                    <span>Ver cómo abordamos educación</span> <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        data-lucide="arrow-right" class="lucide lucide-arrow-right w-4 h-4">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white py-32">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-20 items-center">
+                        <div class="">
+                            <span
+                                class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">Filosofía
+                                LIV</span>
+                            <h2 class="text-4xl font-medium text-[#535353] mb-4 tracking-tight">Una marca que acompaña,
+                                no empuja.</h2>
+                            <p class="text-[#535353]/90 leading-relaxed mb-6 font-medium text-lg">
+                                No te vendemos Australia. Te ayudamos a pensar si este país es parte de tu camino.
+                            </p>
+                            <p class="text-[#535353]/70 leading-relaxed mb-6 font-light">
+                                Sabemos que migrar no es solo un trámite. Toca vínculos, identidad, proyectos y
+                                emociones. Por eso nuestra forma de trabajar empieza por la escucha y la transparencia.
+                            </p>
+                            <ul class="space-y-3 mb-8 text-[#535353]/70 font-light text-sm">
+                                <li class="flex items-start gap-3">
+                                    <span class="custom-bullet"></span>
+                                    <span>Te damos información clara y completa, incluso cuando no es lo que esperabas
+                                        escuchar.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span
+                                        class="w-2 h-2 rounded-full border border-[#aabba0] bg-[#C6AB88]/20 mt-1.5 flex-shrink-0 block"></span>
+                                    <span>Integramos educación y migración en una estrategia coherente, según tu perfil
+                                        real.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span
+                                        class="w-2 h-2 rounded-full border border-[#aabba0] bg-[#C6AB88]/20 mt-1.5 flex-shrink-0 block"></span>
+                                    <span>Te acompañamos con criterio, orden y humanidad, sin urgencias ni promesas
+                                        vacías.</span>
+                                </li>
+                            </ul>
+                            <a href="nosotras.html"
+                                class="text-[#535353] font-medium border-b border-[#535353] pb-1 hover:text-[#C6AB88] hover:border-[#C6AB88] transition-colors">
+                                Conocer nuestra historia
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="aspect-square rounded-3xl overflow-hidden relative bg-[#E8E6E1] shadow-inner">
+                                <img src="assets/lina.png"
+                                    class="w-full h-full object-cover object-[50%_35%] img-tranquil opacity-95"
+                                    alt="LIV Team">
+                                <div class="absolute inset-0 bg-[#C6AB88]/10 mix-blend-multiply"></div>
+                            </div>
+
+                            <div
+                                class="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl max-w-xs hidden md:block">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="bg-[#F0F4F6] p-2 rounded-full text-[#7FA5BA]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check"
+                                            class="lucide lucide-shield-check w-6 h-6">
+                                            <path
+                                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                            </path>
+                                            <path d="m9 12 2 2 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm font-semibold text-[#535353]">Agente registrado (OMARA)</p>
+                                        <p class="text-xs text-gray-400">Marco profesional y regulado</p>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-gray-500 font-light">Trabajamos bajo el código de conducta y las
+                                    guías oficiales vigentes. <a href="#" class="underline hover:text-[#C6AB88]">Ver
+                                        credenciales</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#F9F7F4] border-white border-t pt-32 pb-32">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="flex items-end justify-between mb-12">
+                        <div class="">
+                            <h2 class="text-3xl font-medium text-[#535353] mb-2 tracking-tight">Información para decidir
+                                mejor.</h2>
+                            <p class="text-[#535353]/75 font-light">Guías claras y verificadas para ordenar tus primeros
+                                pasos y entender el sistema.</p>
+                        </div>
+                        <a href="recursos.html"
+                            class="hidden md:flex items-center gap-2 text-sm font-medium text-[#C6AB88] hover:text-[#A89482]">
+                            Ver info <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" data-lucide="arrow-right"
+                                class="lucide lucide-arrow-right w-4 h-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+
+                        <div onclick="window.location.href='articulos/cultura-cafe-sydney.html'"
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#C6AB88] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="coffee" class="lucide lucide-coffee w-5 h-5">
+                                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                                    <line x1="6" x2="6" y1="2" y2="4"></line>
+                                    <line x1="10" x2="10" y1="2" y2="4"></line>
+                                    <line x1="14" x2="14" y1="2" y2="4"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">La cultura del café en Sydney</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6">Más que una bebida, es una institución.
+                                Guía de los mejores barrios para baristas.</p>
+                            <span class="text-xs font-semibold text-[#C6AB88] flex items-center gap-2">Leer artículo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+
+
+                        <div onclick="window.location.href='articulos/carta-gte-perfecta.html'"
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#7FA5BA] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="file-check"
+                                    class="lucide lucide-file-check w-5 h-5">
+                                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                                    <path d="m9 15 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">La carta GTE perfecta</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6">Cómo explicar tus intenciones de
+                                estudio genuinas al Departamento de Home Affairs.</p>
+                            <span class="text-xs font-semibold text-[#7FA5BA] flex items-center gap-2">Leer artículo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+
+
+                        <div onclick="window.location.href='articulos/escapadas-fin-de-semana.html'"
+                            class="bg-white p-8 rounded-2xl hover:shadow-lg transition-all duration-300 cursor-pointer group border border-transparent hover:border-[#C6AB88]/20">
+                            <div
+                                class="w-10 h-10 bg-[#F9F7F4] rounded-lg flex items-center justify-center text-[#535353] mb-6 group-hover:bg-[#697C69] group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-5 h-5">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-medium text-[#535353] mb-3">Escapadas de fin de semana</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6">Lugares increíbles accesibles en tren
+                                desde Sydney y Melbourne.</p>
+                            <span class="text-xs font-semibold text-[#697C69] flex items-center gap-2">Leer artículo
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" data-lucide="arrow-up-right"
+                                    class="lucide lucide-arrow-up-right w-3 h-3">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <liv-footer></liv-footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
 
 </html>

@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info | LIV Migration Australia</title>
-    <link rel="icon" href="assets/isologo.svg" type="image/svg+xml">
+    <title>Resources & Info | LIV Migration Australia</title>
+    <meta name="description" content="Free guides and verified resources about Australian migration, visas, and lifestyle. Essential information to make better decisions for your journey.">
+    <link rel="canonical" href="https://livmigration.com.au/en/recursos.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resources & Info | LIV Migration Australia">
+    <meta property="og:description" content="Free guides and verified resources about Australian migration, visas, and lifestyle. Essential information to make better decisions.">
+    <meta property="og:url" content="https://livmigration.com.au/en/recursos.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Resources & Info | LIV Migration Australia">
+    <meta name="twitter:description" content="Free guides and verified resources about Australian migration, visas, and lifestyle.">
+
+    <link rel="icon" href="../assets/isologo.svg" type="image/svg+xml">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +35,47 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <link id="all-fonts-link-font-playfair" rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://livmigration.com.au/en/recursos.html",
+        "name": "Resources & Info",
+        "description": "Free guides and verified resources about Australian migration, visas, and lifestyle.",
+        "url": "https://livmigration.com.au/en/recursos.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "Article",
+                    "name": "Coffee culture in Sydney",
+                    "url": "https://livmigration.com.au/en/articulos/cultura-cafe-sydney.html"
+                },
+                {
+                    "@type": "Article",
+                    "name": "From GTE to GS",
+                    "url": "https://livmigration.com.au/en/articulos/carta-gte-perfecta.html"
+                },
+                {
+                    "@type": "Article",
+                    "name": "Weekend getaways",
+                    "url": "https://livmigration.com.au/en/articulos/escapadas-fin-de-semana.html"
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 
 <body class="flex flex-col min-h-screen selection:bg-[#C6AB88] selection:text-white">
 
-    <script src="js/components/LivHeader.js" type="module"></script>
-    <script src="js/components/LivFooter.js" type="module"></script>
+    <script src="/js/components/LivHeader.js" type="module"></script>
+    <script src="/js/components/LivFooter.js" type="module"></script>
 
 
     <liv-header></liv-header>
@@ -39,8 +86,8 @@
             <div class="max-w-7xl mx-auto px-6 py-24">
                 <div class="mb-8">
                     <h1 class="text-4xl font-medium text-[#535353] mb-3 tracking-tight">Info</h1>
-                    <p class="text-[#535353]/75 font-light">Contenido útil para entender el sistema y tomar decisiones
-                        con más contexto.</p>
+                    <p class="text-[#535353]/75 font-light">Useful content to understand the system and make decisions
+                        with more context.</p>
                 </div>
 
 
@@ -49,7 +96,7 @@
                         <button data-filter="todo"
                             class="filter-btn active whitespace-nowrap px-5 py-2 rounded-full bg-[#697C69] text-white text-xs font-medium flex items-center gap-2">
                             <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
-                            Todo
+                            All
                         </button>
                         <button data-filter="visas"
                             class="filter-btn whitespace-nowrap px-5 py-2 rounded-full bg-white text-[#535353] hover:bg-[#E9E9E9] text-xs font-medium transition-colors shadow-sm flex items-center gap-2">
@@ -59,11 +106,11 @@
                         <button data-filter="estilo-de-vida"
                             class="filter-btn whitespace-nowrap px-5 py-2 rounded-full bg-white text-[#535353] hover:bg-[#E9E9E9] text-xs font-medium transition-colors shadow-sm flex items-center gap-2">
                             <i data-lucide="coffee" class="w-3.5 h-3.5"></i>
-                            Estilo de Vida
+                            Lifestyle
                         </button>
                     </div>
                     <div class="relative w-full md:w-80">
-                        <input type="text" placeholder="Buscar por tema"
+                        <input type="text" placeholder="Search by topic"
                             class="w-full bg-white border-none rounded-full pl-6 pr-4 py-3 text-sm focus:ring-2 focus:ring-[#C6AB88]/20 outline-none shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -79,37 +126,37 @@
 
                     <article data-category="estilo-de-vida"
                         class="article-card bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                        onclick="window.location.href='articulos/cultura-cafe-sydney.html'">
+                        onclick="window.location.href='/en/articulos/cultura-cafe-sydney.html'">
                         <div class="h-48 overflow-hidden relative">
                             <img src="/assets/sydney.jpg"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
-                                alt="Café australiano en Melbourne">
+                                alt="Australian café in Melbourne">
                             <div
                                 class="absolute top-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-[#535353] flex items-center gap-1.5 shadow-sm">
                                 <i data-lucide="coffee" class="w-3 h-3 text-[#C6AB88]"></i>
-                                Estilo de Vida
+                                Lifestyle
                             </div>
                         </div>
                         <div class="p-8">
                             <h3
                                 class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
-                                La cultura del café en Sydney</h3>
-                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">Más que una bebida, es una
-                                institución. Guía de los mejores barrios para baristas.</p>
+                                Coffee culture in Sydney</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">More than a drink, it's an
+                                institution. Guide to the best neighborhoods for baristas.</p>
                             <span
-                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Abrir
-                                artículo</span>
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Open
+                                article</span>
                         </div>
                     </article>
 
 
                     <article data-category="visas"
                         class="article-card bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                        onclick="window.location.href='articulos/carta-gte-perfecta.html'">
+                        onclick="window.location.href='/en/articulos/carta-gte-perfecta.html'">
                         <div class="h-48 overflow-hidden relative">
                             <img src="/assets/aussie.jpg"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
-                                alt="Documentos de visa">
+                                alt="Visa documents">
                             <div
                                 class="absolute top-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-[#535353] flex items-center gap-1.5 shadow-sm">
                                 <i data-lucide="file-check" class="w-3 h-3 text-[#7FA5BA]"></i>
@@ -119,38 +166,38 @@
                         <div class="p-8">
                             <h3
                                 class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
-                                La carta GTE perfecta</h3>
-                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">Cómo explicar tus
-                                intenciones de estudio genuinas al Departamento de Home Affairs.</p>
+                                From GTE to GS</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">What changed with the
+                                Genuine Student requirement and how to prepare clear answers.</p>
                             <span
-                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Abrir
-                                artículo</span>
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Open
+                                article</span>
                         </div>
                     </article>
 
 
                     <article data-category="estilo-de-vida"
                         class="article-card bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                        onclick="window.location.href='articulos/escapadas-fin-de-semana.html'">
+                        onclick="window.location.href='/en/articulos/escapadas-fin-de-semana.html'">
                         <div class="h-48 overflow-hidden relative">
                             <img src="/assets/viajes.jpg"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 img-tranquil"
-                                alt="Paisaje natural australiano">
+                                alt="Australian natural landscape">
                             <div
                                 class="absolute top-4 left-4 bg-white/95 backdrop-blur px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-[#535353] flex items-center gap-1.5 shadow-sm">
-                                <i data-lucide="map-pin" class="w-3 h-3 text-[#697C69]"></i>
-                                Estilo de Vida
+                                <i data-lucide="coffee" class="w-3 h-3 text-[#697C69]"></i>
+                                Lifestyle
                             </div>
                         </div>
                         <div class="p-8">
                             <h3
                                 class="text-lg font-medium text-[#535353] mb-3 group-hover:text-[#C6AB88] transition-colors">
-                                Escapadas de fin de semana</h3>
-                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">Lugares increíbles
-                                accesibles en tren desde Sydney y Melbourne.</p>
+                                Weekend getaways</h3>
+                            <p class="text-sm text-[#535353]/75 font-light mb-6 line-clamp-2">Incredible places
+                                accessible by train from Sydney and Melbourne.</p>
                             <span
-                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Abrir
-                                artículo</span>
+                                class="text-xs font-semibold text-[#535353] border-b border-[#535353] pb-0.5 group-hover:border-[#C6AB88] group-hover:text-[#C6AB88] transition-colors">Open
+                                article</span>
                         </div>
                     </article>
                 </div>
@@ -187,7 +234,7 @@
                 // Filter articles
                 articleCards.forEach(card => {
                     const category = card.getAttribute('data-category');
-                    if (filter === 'todo' || category === filter) {
+                    if (filter === 'todo' || filter === 'all' || category === filter) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';

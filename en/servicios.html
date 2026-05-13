@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | LIV Migration Australia</title>
-    <link rel="icon" href="assets/isologo.svg" type="image/svg+xml">
+    <title>Services | LIV Migration Australia</title>
+    <meta name="description" content="Migration advisory and educational planning services. Skilled visas, partner visas, student visas with registered MARA agents in Australia.">
+    <link rel="canonical" href="https://livmigration.com.au/en/servicios.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Services | LIV Migration Australia">
+    <meta property="og:description" content="Migration advisory and educational planning services. Skilled visas, partner visas, student visas with registered MARA agents in Australia.">
+    <meta property="og:url" content="https://livmigration.com.au/en/servicios.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services | LIV Migration Australia">
+    <meta name="twitter:description" content="Migration advisory and educational planning services. Skilled visas, partner visas, student visas with registered MARA agents in Australia.">
+
+    <link rel="icon" href="../assets/isologo.svg" type="image/svg+xml">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +35,48 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <link id="all-fonts-link-font-playfair" rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://livmigration.com.au/en/#organization",
+        "name": "LIV Migration",
+        "url": "https://livmigration.com.au/en/",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Migration and Education Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Migration Advisory",
+                        "description": "Skilled visas (189, 190, 491), Partner visas (820/801), and Employer Sponsored visas with registered MARA agents."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Educational Planning",
+                        "description": "Educational planning aligned to migration objectives. Student visa (subclass 500) assistance and course selection guidance."
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 
 <body class="flex flex-col min-h-screen selection:bg-[#C6AB88] selection:text-white">
 
-    <script src="js/components/LivHeader.js" type="module"></script>
-    <script src="js/components/LivFooter.js" type="module"></script>
+    <script src="/js/components/LivHeader.js" type="module"></script>
+    <script src="/js/components/LivFooter.js" type="module"></script>
 
 
     <liv-header></liv-header>
@@ -42,11 +90,11 @@
                 <div class="absolute inset-0 bg-white/60"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center max-w-2xl px-6">
-                        <span class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">Nuestros
-                            Servicios</span>
-                        <h1 class="text-4xl md:text-5xl font-medium text-[#535353] tracking-tight">Claridad legal y
-                            educativa</h1>
-                        <p class="mt-4 text-[#535353]/85 font-light text-lg">Para tomar decisiones conscientes.</p>
+                        <span class="text-[#C6AB88] font-semibold text-xs tracking-widest uppercase mb-4 block">Our
+                            Services</span>
+                        <h1 class="text-4xl md:text-5xl font-medium text-[#535353] tracking-tight">Legal and
+                            educational clarity</h1>
+                        <p class="mt-4 text-[#535353]/85 font-light text-lg">To make conscious decisions.</p>
                     </div>
                 </div>
             </div>
@@ -56,11 +104,11 @@
                     <div class="bg-white p-1.5 rounded-full inline-flex border border-[#E9E9E9] shadow-sm">
                         <button onclick="switchServiceTab('migracion')" id="tab-migracion"
                             class="px-8 py-3 rounded-full text-sm font-semibold transition-all bg-[#F9F7F4] text-[#535353]">
-                            Migraciones
+                            Migration
                         </button>
                         <button onclick="switchServiceTab('estudiantes')" id="tab-estudiantes"
                             class="px-8 py-3 rounded-full text-sm font-medium text-[#535353]/75 hover:text-[#535353] transition-all">
-                            Estudiantes
+                            Students
                         </button>
                     </div>
                 </div>
@@ -70,12 +118,12 @@
                     <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-[#E9E9E9]">
                         <div class="flex flex-col md:flex-row gap-12">
                             <div class="flex-1">
-                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Asesoría migratoria con estrategia
+                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Migration advisory with strategy
                                 </h3>
                                 <p class="text-[#535353]/80 font-light leading-relaxed mb-8 text-lg">
-                                    El sistema migratorio australiano es complejo y cambia. Nuestro rol es ayudarte a
-                                    entender tu escenario real, ordenar opciones y construir un plan con pasos
-                                    concretos. Sin atajos, sin promesas.
+                                    The Australian migration system is complex and changes. Our role is to help you
+                                    understand your real scenario, organize options, and build a plan with concrete
+                                    steps. No shortcuts, no promises.
                                 </p>
                                 <div class="space-y-4">
                                     <div
@@ -90,8 +138,8 @@
                                             </svg></div>
                                         <div>
                                             <h4 class="font-medium text-[#535353]">Skilled Visas (189, 190, 491)</h4>
-                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Evaluación de puntos,
-                                                elegibilidad y skills assessment.</p>
+                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Points evaluation,
+                                                eligibility, and skills assessment.</p>
                                         </div>
                                     </div>
                                     <div
@@ -107,17 +155,17 @@
                                             </svg></div>
                                         <div>
                                             <h4 class="font-medium text-[#535353]">Partner Visas (820/801)</h4>
-                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Guía de evidencias y
-                                                preparación del caso con criterio.</p>
+                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Evidence guidance and
+                                                case preparation with judgment.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="https://calendly.com/veronica-liv-consulting/45min" target="_blank"
                                     class="mt-10 bg-[#697C69] text-white px-8 py-3 rounded-full font-medium hover:bg-black transition-colors w-full md:w-auto inline-block text-center">
-                                    Conversar con nosotras
+                                    Talk with us
                                 </a>
-                                <p class="mt-3 text-xs text-[#535353]/75 font-light">Primero entendemos tu situación.
-                                    Después definimos próximos pasos.</p>
+                                <p class="mt-3 text-xs text-[#535353]/75 font-light">First, we understand your situation.
+                                    Then we define next steps.</p>
                             </div>
                             <div class="w-full md:w-1/3">
                                 <div
@@ -132,13 +180,13 @@
                                         <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"></path>
                                         <path d="M7 21h10"></path>
                                     </svg>
-                                    <h4 class="font-medium text-[#535353] mb-2">Código de Conducta</h4>
-                                    <p class="text-sm text-[#535353]/75 font-light mb-6">Operamos bajo el código de
-                                        conducta de la autoridad migratoria (OMARA). Transparencia, responsabilidad y
-                                        claridad desde el primer contacto.</p>
+                                    <h4 class="font-medium text-[#535353] mb-2">Code of Conduct</h4>
+                                    <p class="text-sm text-[#535353]/75 font-light mb-6">We operate under the migration
+                                        authority's code of conduct (OMARA). Transparency, responsibility, and
+                                        clarity from the first contact.</p>
                                     <a href="#"
-                                        class="text-xs font-semibold text-[#535353] underline decoration-[#C6AB88]">Ver
-                                        Credenciales</a>
+                                        class="text-xs font-semibold text-[#535353] underline decoration-[#C6AB88]">View
+                                        Credentials</a>
                                 </div>
                             </div>
                         </div>
@@ -150,12 +198,12 @@
                     <div class="bg-white rounded-3xl p-10 md:p-16 shadow-sm border border-[#E9E9E9]">
                         <div class="flex flex-col md:flex-row gap-12">
                             <div class="flex-1">
-                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Planificación educativa con
-                                    propósito</h3>
+                                <h3 class="text-3xl font-medium text-[#535353] mb-6">Educational planning with
+                                    purpose</h3>
                                 <p class="text-[#535353]/80 font-light leading-relaxed mb-8 text-lg">
-                                    Australia ofrece miles de opciones. Te ayudamos a elegir con criterio: qué estudiar,
-                                    dónde, por qué, y cómo se conecta con tu proyecto de vida. Si estudiar no suma a tu
-                                    estrategia, también te lo decimos.
+                                    Australia offers thousands of options. We help you choose with judgment: what to study,
+                                    where, why, and how it connects with your life project. If studying doesn't add to your
+                                    strategy, we tell you that too.
                                 </p>
                                 <div class="space-y-4">
                                     <div
@@ -172,9 +220,9 @@
                                                 <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
                                             </svg></div>
                                         <div>
-                                            <h4 class="font-medium text-[#535353]">Educación Superior &amp; VET</h4>
-                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Opciones alineadas a tu
-                                                perfil y objetivos.</p>
+                                            <h4 class="font-medium text-[#535353]">Higher Education &amp; VET</h4>
+                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Options aligned to your
+                                                profile and objectives.</p>
                                         </div>
                                     </div>
                                     <div
@@ -191,16 +239,16 @@
                                                 <path d="m9 15 2 2 4-4"></path>
                                             </svg></div>
                                         <div>
-                                            <h4 class="font-medium text-[#535353]">Visa de estudiante (subclass 500)
+                                            <h4 class="font-medium text-[#535353]">Student Visa (subclass 500)
                                             </h4>
-                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Gestión completa de
-                                                documentación clave (GTE y OSHC).</p>
+                                            <p class="text-sm text-[#535353]/75 font-light mt-1">Complete management of
+                                                key documentation (GTE and OSHC).</p>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="mailto:lina@liv-consulting.com.au?subject=Consulta%20sobre%20plan%20educativo"
+                                <a href="mailto:lina@liv-consulting.com.au?subject=Educational%20plan%20enquiry"
                                     class="mt-10 bg-[#7FA5BA] text-white px-8 py-3 rounded-full font-medium hover:bg-[#6D92A6] transition-colors w-full md:w-auto inline-block text-center">
-                                    Diseñar un plan educativo
+                                    Design an educational plan
                                 </a>
                             </div>
                             <div class="w-full md:w-1/3">

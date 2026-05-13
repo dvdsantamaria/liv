@@ -4,9 +4,36 @@ class LivFooter extends HTMLElement {
     }
 
     connectedCallback() {
-        // Determine root path handling for both local server and file protocol
-        const isArticlePage = window.location.pathname.includes('/articulos/');
-        const rootPath = isArticlePage ? '../' : '';
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const isEnglish = pathParts[0] === 'en';
+        const isArticlePage = pathParts.includes('articulos');
+        const rootPath = isEnglish ? (isArticlePage ? '../../' : '../') : (isArticlePage ? '../' : '');
+        const langPrefix = isEnglish ? 'en/' : '';
+        const labels = isEnglish
+            ? {
+                tagline: 'Honest guidance for your migration and education process in Australia.',
+                note: 'We do not sell Australia. We help you think through your path.',
+                explore: 'Explore',
+                services: 'Services',
+                about: 'About us',
+                contact: 'Contact',
+                legal: 'Legal',
+                privacy: 'Privacy Policy',
+                rights: 'All rights reserved.',
+                designed: 'Designed with purpose in Australia.'
+            }
+            : {
+                tagline: 'Acompañamiento honesto para tu proceso migratorio y educativo en Australia.',
+                note: 'No te vendemos Australia. Te ayudamos a pensar tu camino.',
+                explore: 'Explorar',
+                services: 'Servicios',
+                about: 'Nosotras',
+                contact: 'Contacto',
+                legal: 'Legal',
+                privacy: 'Política de Privacidad',
+                rights: 'All rights reserved.',
+                designed: 'Designed with purpose in Australia.'
+            };
 
         this.innerHTML = `
     <footer class="bg-white border-t border-[#E9E9E9] pt-20 pb-10 px-6">
@@ -15,25 +42,25 @@ class LivFooter extends HTMLElement {
                 <div class="md:col-span-1">
                     <img src="${rootPath}assets/isologo.svg" alt="LIV Logo" class="h-8 mb-6 block">
                     <p class="text-sm text-[#535353]/75 font-light leading-relaxed max-w-xs mb-3">
-                        Acompañamiento honesto para tu proceso migratorio y educativo en Australia.
+                        ${labels.tagline}
                     </p>
                     <p class="text-xs text-[#535353]/70 font-light italic max-w-xs">
-                        No te vendemos Australia. Te ayudamos a pensar tu camino.
+                        ${labels.note}
                     </p>
                 </div>
 
                 <div class="">
-                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Explorar</h4>
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">${labels.explore}</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/75 font-light">
-                        <li><a href="${rootPath}index-v3.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
-                        <li><a href="${rootPath}servicios.html" class="hover:text-[#C6AB88] transition-colors">Servicios</a></li>
-                        <li><a href="${rootPath}nosotras.html" class="hover:text-[#C6AB88] transition-colors">Nosotras</a></li>
-                        <li><a href="${rootPath}recursos.html" class="hover:text-[#C6AB88] transition-colors">Info</a></li>
+                        <li><a href="${rootPath}${langPrefix}index.html" class="hover:text-[#C6AB88] transition-colors">Home</a></li>
+                        <li><a href="${rootPath}${langPrefix}servicios.html" class="hover:text-[#C6AB88] transition-colors">${labels.services}</a></li>
+                        <li><a href="${rootPath}${langPrefix}nosotras.html" class="hover:text-[#C6AB88] transition-colors">${labels.about}</a></li>
+                        <li><a href="${rootPath}${langPrefix}recursos.html" class="hover:text-[#C6AB88] transition-colors">Info</a></li>
                     </ul>
                 </div>
 
                 <div class="">
-                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Contacto</h4>
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">${labels.contact}</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/75 font-light">
                         <li class="">hello@livmigration.com.au</li>
                         <li class="">Sydney 2026, NSW, Australia</li>
@@ -63,19 +90,18 @@ class LivFooter extends HTMLElement {
                 </div>
 
                 <div>
-                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">Legal</h4>
+                    <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">${labels.legal}</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/80 font-light">
-                        <li><a href="#" class="hover:text-[#C6AB88]">Política de Privacidad</a></li>
-                        <li><a href="#" class="hover:text-[#C6AB88]">Code of Conduct (OMARA)</a></li>
-                        <li><a href="#" class="hover:text-[#C6AB88]">Consumer Guide</a></li>
+                        <li><a href="${rootPath}${langPrefix}privacidad.html" class="hover:text-[#C6AB88]">${labels.privacy}</a></li>
+                        <li><a href="${rootPath}${langPrefix}code-of-conduct.html" class="hover:text-[#C6AB88]">Code of Conduct (OMARA)</a></li>
                     </ul>
                 </div>
             </div>
 
             <div
                 class="border-t border-[#F9F7F4] pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-[#535353]/70 font-light uppercase tracking-wide">
-                <p>© ${new Date().getFullYear()} LIV Consulting. All rights reserved.</p>
-                <p class="mt-2 md:mt-0"><a href="https://doopux.com" target="_blank" class="hover:text-[#C6AB88] transition-colors">Designed with purpose in Australia.</a></p>
+                <p>© ${new Date().getFullYear()} LIV Consulting. ${labels.rights}</p>
+                <p class="mt-2 md:mt-0"><a href="https://doopux.com" target="_blank" class="hover:text-[#C6AB88] transition-colors">${labels.designed}</a></p>
             </div>
         </div>
     </footer>
