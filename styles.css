@@ -51,17 +51,6 @@ body {
     filter: sepia(0%) saturate(100%) contrast(100%) brightness(100%);
 }
 
-.mobile-hero-opera {
-    transform: translateY(5.5rem) scale(1.12);
-    transform-origin: center top;
-}
-
-@media (min-width: 768px) {
-    .mobile-hero-opera {
-        transform: scale(1);
-    }
-}
-
 /* Hero Overlays - Dreamy Sunset Theme */
 .hero-overlay-vertical {
     background: linear-gradient(to bottom,
