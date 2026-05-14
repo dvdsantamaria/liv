@@ -62,7 +62,7 @@ class LivFooter extends HTMLElement {
                 <div class="">
                     <h4 class="font-medium text-[#535353] mb-6 text-xs uppercase tracking-wider">${labels.contact}</h4>
                     <ul class="space-y-3 text-sm text-[#535353]/75 font-light">
-                        <li class="">hello@livmigration.com.au</li>
+                        <li><a href="mailto:admin@liv-consulting.com.au" class="hover:text-[#C6AB88] transition-colors">admin@liv-consulting.com.au</a></li>
                         <li class="">Sydney 2026, NSW, Australia</li>
                         <li class="flex items-center gap-4 pt-2">
                             <a href="https://www.instagram.com/livmigration/" target="_blank" class="text-[#535353] hover:text-[#C6AB88] transition-colors"><svg
